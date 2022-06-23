@@ -2,6 +2,9 @@ import { Component, createSignal, createEffect } from "solid-js";
 
 const App: Component = () => {
   const [count, setCount] = createSignal(0);
+  // 这个称之为 Derived Signals
+  // 就是 signals 可以被一个函数所包裹
+  const doubleCount = () => count() * 2
 
   createEffect(() => {
     // 只有在组件里面才会执行
@@ -23,6 +26,9 @@ const App: Component = () => {
       >
         {count()}
       </button>
+      <div>
+        double:{doubleCount()}
+      </div>
     </div>
   );
 };
