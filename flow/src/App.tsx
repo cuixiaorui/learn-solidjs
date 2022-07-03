@@ -3,6 +3,7 @@ import CFor from "./CFor";
 import CShow from './CShow'
 import CIndex from './CIndex'
 import CSwitch from './CSwitch'
+import CDynamic from './CDynamic'
 
 const App: Component = () => {
   const [count, setCount] = createSignal(0);
@@ -14,6 +15,7 @@ const App: Component = () => {
       <CFor></CFor>
       <CIndex></CIndex>
       <CSwitch></CSwitch>
+      <CDynamic></CDynamic>
     </div>
   );
 };
